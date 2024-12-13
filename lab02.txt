@@ -1,0 +1,222 @@
+HTML: Основна структура сторінки
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Головна сторінка</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Шапка сайту -->
+  <header>
+    <div class="container">
+      <h1 class="logo">MyWebApp</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#features">Функції</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#contact">Контакти</a></li>
+          <li><a href="#login" class="btn">Увійти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Головний банер -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Ласкаво просимо до MyWebApp!</h2>
+      <p>Тут ви знайдете все необхідне для вирішення ваших задач.</p>
+      <a href="#features" class="btn">Дізнатись більше</a>
+    </div>
+  </section>
+
+  <!-- Основні функції -->
+  <section id="features" class="features">
+    <h2>Основні функції</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>Функція 1</h3>
+        <p>Опис першої функції вашого додатку.</p>
+      </div>
+      <div class="card">
+        <h3>Функція 2</h3>
+        <p>Опис другої функції вашого додатку.</p>
+      </div>
+      <div class="card">
+        <h3>Функція 3</h3>
+        <p>Опис третьої функції вашого додатку.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок "Про нас" -->
+  <section id="about" class="about">
+    <h2>Про нас</h2>
+    <p>Коротка інформація про вашу команду або додаток.</p>
+  </section>
+
+  <!-- Контактна форма -->
+  <section id="contact" class="contact">
+    <h2>Зв'язатися з нами</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Ваше ім'я" required>
+      <input type="email" name="email" placeholder="Ваш email" required>
+      <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+      <button type="submit" class="btn">Надіслати</button>
+    </form>
+  </section>
+
+  <!-- Підвал -->
+  <footer>
+    <p>&copy; 2024 MyWebApp. Усі права захищено.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+CSS: Стилізація макету
+/* Загальні стилі */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Шапка */
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header .logo {
+  font-size: 24px;
+}
+header .nav-links {
+  list-style: none;
+  display: flex;
+}
+header .nav-links li {
+  margin: 0 15px;
+}
+header .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+header .btn {
+  background: #007BFF;
+  padding: 5px 15px;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Головний банер */
+.hero {
+  background: #007BFF;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+.hero-content h2 {
+  font-size: 36px;
+}
+.hero-content p {
+  font-size: 18px;
+}
+.hero-content .btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #007BFF;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Основні функції */
+.features {
+  padding: 20px;
+  background: #f4f4f4;
+}
+.features h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px;
+  text-align: center;
+}
+
+/* Блок "Про нас" */
+.about {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Контактна форма */
+.contact {
+  padding: 20px;
+  background: #f4f4f4;
+}
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.contact .btn {
+  padding: 10px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Підвал */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+
+Особливості:
+Шапка сайту – для навігації між основними секціями сторінки.
+Головний банер – містить привітання та кнопку переходу до функцій.
+Секція функцій – перелік ключових особливостей додатку.
+Блок "Про нас" – коротка інформація про вашу команду або продукт.
+Контактна форма – для зв'язку з відвідувачами.
